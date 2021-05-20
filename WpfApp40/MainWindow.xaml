@@ -1,0 +1,59 @@
+﻿<Window x:Class="WpfApp40.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp40"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!--Приложение-->
+        <Image
+                Source="C:\Users\User\Downloads\1.png"
+                Grid.RowSpan="2"/>
+        <StackPanel
+                Orientation="Vertical"
+                Grid.RowSpan="3"
+                VerticalAlignment="Bottom">
+            <Button
+                    x:Name="ExitButton"
+                    Content="Выход"
+                    Click="ExitButton_Click"
+                    Height="50"/>
+        </StackPanel>
+        <WrapPanel
+                Orientation="Horizontal"
+                Grid.Column="1"
+                MinHeight="50">
+        </WrapPanel>
+        <DataGrid
+                Grid.Row="1"
+                CanUserAddRows="True"
+                AutoGenerateColumns="False"
+                ItemsSource="{Binding WorkerList}" Margin="198,1,2,49" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                        Header="ФИО"
+                        Binding="{Binding Surname}"/>
+                <DataGridTextColumn
+                        Header="Должность"
+                        Binding="{Binding Role}"/>
+                <DataGridTextColumn
+                        Header="год начала работы"
+                        Binding="{Binding Year}"/>
+                <DataGridTextColumn
+                        Header="Зарплата"
+                        Binding="{Binding Salary}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
