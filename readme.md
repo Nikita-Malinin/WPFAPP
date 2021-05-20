@@ -65,7 +65,8 @@ IEnumerable<CatBreed> GetCatBreeds();
 2. Чтобы задать позицию элемента управления с привязкой к определенной ячейке Grid-а, в разметке элемента нужно прописать значения свойств Grid.Column и Grid.Row, тем самым указывая, в каком столбце и строке будет находиться элемент. Кроме того, если мы хотим растянуть элемент управления на несколько строк или столбцов, то можно указать свойства Grid.ColumnSpan и Grid.RowSpan, как в следующем примере:
 
     ```
-![Лабораторная](.\screen\worker.png)
+![Лабораторная](./screen/worker.png)
+
 ```xml
  <Window x:Class="WpfApp40.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
